@@ -2,9 +2,9 @@ FROM python:3.11.3
 
 WORKDIR /app
 
-RUN pip install poetry
+RUN pip install poetry==1.7.0
 
-COPY pyproject.toml poetry.lock ./
+COPY pyproject.toml ./
 
 RUN poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
