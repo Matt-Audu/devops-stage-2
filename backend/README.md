@@ -135,7 +135,18 @@ backend:
 volumes:
   pgdata:
   ```
-  
 
+## Configuration
+
+Access the various services with the pubic.IP:portnumber of the server
+
+- Sign into adminer with the credentials listed in backend/.env and configure database table.
+- Sign into proxy manager with email: `admin@example.com` and password: `changeme`
+- Get a free domain name from my.noip.com and set the frontend as main domain.
+- Configure Nginx to route /docs to main domain, /api to main domain.
+- Get a free SSL certificate from nginx proxy manager.
+- Sign into frontend end with credentials in backend/.env.
+- Create subdomain proxy.domain to route to nginx proxy.
+- Create subdomain db.domain to route to adminer 
 
 
